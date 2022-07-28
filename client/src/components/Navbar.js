@@ -2,8 +2,8 @@
 
 import React from 'react';
 import styled from "styled-components";
-
-
+import { Link } from "react-router-dom";
+import "./cssFiles/navBar.css"
 
 // The below are styled components
 // We use div at the end because that's the html element we want to create and use when we nest it
@@ -54,13 +54,13 @@ export default function Navbar() {
         <Container>
             <Wrapper>
 
-                <LeftSection> PLANT VANDAL </LeftSection>
+                <LeftSection> <Link to="/" className='navLink'> PLANT VANDAL </Link></LeftSection>
                 <CenterSection>  </CenterSection>
                 <RightSection>
 
-                    <MenuItem>STORE</MenuItem>
-                    <MenuItem>CONTACT</MenuItem>
-                    <MenuItem>PLANT CARE</MenuItem>
+                    <MenuItem><Link to="/store" className='navLink'> STORE </Link></MenuItem>
+                    <MenuItem><Link to="/contact" className='navLink'> CONTACT </Link></MenuItem>
+                    <MenuItem><Link to="/plantcare" className='navLink'> PLANT CARE </Link></MenuItem>
                 </RightSection>
 
             </Wrapper>

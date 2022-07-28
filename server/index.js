@@ -1,20 +1,62 @@
-// // importing express and then creating an express application 
+// middle man
+const express = require("express");
+const mysql = require("mysql");
+// brings back data in a way you can understand
+const cors = require("cors");
 
-// const { application } = require('express');
-// const express = require('express');
-// const app = express();
 
-// // 1 - importing the user routes we made in the routes folder:
-// const users = require('./routes/users')
+// Now we can use express as a variable 
+const app = express();
 
-// // 2 - Registering what we imported as middleware 
-// app.use('/api/users', users)
+// This will make it so we pull the variables created in the .env file and
+require("dotenv").config()
 
-// // Creating routes to handle incoming requests on the express application
-// // If the user accesses these routes, we send back the stated response
-// app.get('/api', (req, res) => {
-//     res.send('hello world through the world of express!')
+// create connection can time out when you don't use it, and you'll have to manually restart it
+const pool = mysql.createPool({
+  host: process.env.MYSQL_HOST,
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
+  database: process.env.MYSQL_DATABASE,
+});
+
+
+// telling express how we want the data to come back in a readable format 
+app.use(cors());
+app.use(express.json());
+
+
+// app.get("/", (req, res) => {
+
+//     // if (err) {
+//     //     console.log(err)
+//     // } else {
+
+
+//     // Send this back 
+//     res.send("Hello WOrld")
+
+
 
 // })
 
-// app.listen(1233);
+// res is express's result
+// result is mySql's result 
+// api part is necessary, this is due to the fact that on react's end might have the same route name
+app.get("/api/products", (req, res) => {
+
+    // How we query
+    pool.query("SELECT * FROM product_info", (err, result) => {
+      if (err) {
+        console.log(err);
+      } else {
+        res.send(result);
+      }
+    });
+  });
+
+// Port is runnning
+// If port defined use that, if not use 3001
+app.listen(process.env.PORT || 3001, () => {
+    console.log(`The server listening on port 3001`);
+});
+

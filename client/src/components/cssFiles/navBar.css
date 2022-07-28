@@ -1,0 +1,15 @@
+/* Making the nav links not being underlined */
+.navLink {
+    text-decoration: none;
+    color: #523637;
+}
+
+.navLink:visited {
+    color: #523637;
+}
+
+/* Making the nav links change color when hovered over */
+
+.navLink:hover {
+    color: #E1DC6B;
+}

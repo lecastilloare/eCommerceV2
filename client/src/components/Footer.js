@@ -9,6 +9,7 @@ height: 200px;
 color: Black;
 background-color: #F3FFB9; 
 `
+
 const LeftSeciton = styled.div`
 flex: 1;
 flex-direction: column;
