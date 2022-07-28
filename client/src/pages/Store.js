@@ -18,8 +18,8 @@ export default function Store() {
 
     // how we call api, reacts way of calling a function
     useEffect(() => {
-        
-// 
+
+        // 
         axios.get("http://localhost:3001/api/products")
             .then((response) => {
 
