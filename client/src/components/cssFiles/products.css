@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    background-color: blue;
+
+}
+
+.product_box {
+    background-color: cyan;
+    width: 500 px;
+
+}
+
+.info {
+    background-color: blueviolet;
+    width: 100%;
+}
