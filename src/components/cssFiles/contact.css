@@ -4,54 +4,57 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    position: relative;
     display: flex;
-}
-
-.Form-area {
-    display: flex;
-    background: rgba(0, 0, 0, 0.7);
-    width: 800px;
-    height: auto;
-    margin: auto;
-    color: white;
-    border-radius: 15px;
 }
 
 .details-area {
-    padding: 20px;
+
+    display: flex;
+    flex-direction: column;
+    background: rgb(62, 69, 22, 0.85);
+    width: 700px;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    font-size: 16px;
+    padding: 10px;
+    color: #FDF2B0;
 }
 
 .details-area input {
-    width: 90%;
+    padding: 1rem;
+    width: 300px;
     color: rgb(0, 0, 0);
-    border-radius: 50px;
+    border-radius: 10px;
 }
 
 textarea {
-    width: 90%;
-    border-radius: 25px;
-    padding: 2em;
-}
-
-.details-area input,
-.details-area button {
-    padding: 1rem;
-    margin-bottom: 1rem;
+    width: 300px;
+    border-radius: 10px;
+    padding: 1em;
 }
 
 .details-area button {
-    margin-left: 250px;
-    margin-top: 10px;
+    width: 120px;
+    align-items: center;
+    background-color: #FDF2B0;
+    color: black;
+    border: none;
+    font-size: 20px;
+    border-radius: 5%;
+    margin-top: 40px;
 }
 
-.footerbar3 {
-    display: flex;
-    list-style-type: none;
-    justify-content: space-evenly;
-    margin-top: 60px;
+input:invalid {
+    border: 2px dashed red;
 }
 
-button {
-    border-radius: 15px;
+input:invalid:required {
+    background-image: pink;
+}
+
+input:valid {
+    border: 2px solid black;
 }

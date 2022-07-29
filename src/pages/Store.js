@@ -13,9 +13,10 @@ const Container = styled.div`
 display: flex;
 flex-wrap: wrap;
 width: 100vw;
-background-color: blue;
-border: 1px solid red;
+background-color: #60691D;
 text-align: center;
+padding-top: 30px;
+padding-bottom: 30px;
 `
 
 

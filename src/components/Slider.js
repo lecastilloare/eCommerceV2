@@ -19,19 +19,19 @@ overflow: hidden;
 const Arrow = styled.div`
 width: 40px; 
 height: 40px;
-background-color: #A1AE25;
+background-color: #FFFDE2;
 border-radius: 30%;
 display: flex;
 align-items: center; 
 justify-content: center;
 position: absolute;
-top: 0;
-bottom: 0; 
-left: ${props => props.direction === "left" && "30px"};
-right: ${props => props.direction === "right" && "30px"};
+top: 70%;
+
+left: ${props => props.direction === "left" && "10x"};
+right: ${props => props.direction === "right" && "10px"};
 margin: auto; 
 cursor: pointer;
-opacity: 0.5;
+opacity: 0.8;
 z-index: 2;
 `
 
@@ -63,7 +63,8 @@ flex: 1;
 
 //This is where the actual image will be
 const Image = styled.img`
-height: 80%; 
+height: 70%; 
+max-width: 20
 
 `
 
@@ -73,21 +74,36 @@ flex: 1;
 padding: 50px; 
 `
 const Title = styled.h1`
-font-size: 70px;
+font-size: 40px;
+color: #FDF2B0;
 
 `
 // Only margin on top and bottom, not left or right 
 const Desc = styled.p`
 margin: 50px 0px; 
-font-size: 20px;
-font-weight: 500; 
-letter-spacing: 2px; 
+font-size: 14px;
+font-weight: 400; 
+letter-spacing: 1.5px; 
+color: #FDF2B0;
 `
+
+const ButtonCon = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+
+`
+
+
 
 const Button = styled.button`
 padding: 10px;
+background-color: #FDF2B0;
+color: black;
+text-decoration: none;
+border: none;
 font-size: 20px;
-background-color: transparent;
+border-radius: 5%;
 
 `
 
@@ -131,7 +147,9 @@ export default function Slider() {
                         <InfoContainer>
                             <Title> {item.title} </Title>
                             <Desc> {item.desc}</Desc>
-                            <Button> CLICK </Button>
+                            <ButtonCon>
+                                <Button> Store </Button>
+                            </ButtonCon>
                         </InfoContainer>
                     </Slide>
                 )

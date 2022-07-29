@@ -1,15 +1,29 @@
 /* Making the nav links not being underlined */
 .navLink {
     text-decoration: none;
-    color: #523637;
+    color: #3E4516;
+    font-weight: bold;
 }
 
 .navLink:visited {
-    color: #523637;
+    color: #3E4516;
 }
 
 /* Making the nav links change color when hovered over */
 
 .navLink:hover {
-    color: #E1DC6B;
+    color: #eb4511;
+}
+
+
+.iconImg {
+    color: #FDF2B0;
+}
+
+.iconImg:visited {
+    color: #FDF2B0;
+}
+
+.iconImg:hover {
+    color: #3E4516;
 }

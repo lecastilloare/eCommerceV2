@@ -38,25 +38,27 @@ justify-content: center;
 
 //This is where the actual image will be
 const Image = styled.img`
-height: 80%; 
-
+width: 65%;
+height: 90%;
 `
 
 // The styled component for a section of the above Slide component, contains the description 
 const InfoContainer = styled.div`
-flex: 3;
-padding: 50px; 
+flex: 1;
+padding: 100px; 
 `
 const Title = styled.h1`
 font-size: 70px;
+color: #d64e04;
 
 `
 // Only margin on top and bottom, not left or right 
 const Desc = styled.p`
 margin: 50px 0px; 
-font-size: 20px;
-font-weight: 500; 
-letter-spacing: 2px; 
+color: #black;
+font-size: 14px;
+font-weight: 400; 
+letter-spacing: 1.5px; 
 `
 
 //In order for us to position each arrow icon individually, we can use props!

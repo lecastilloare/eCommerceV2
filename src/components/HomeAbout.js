@@ -40,26 +40,28 @@ justify-content: center;
 
 //This is where the actual image will be
 const Image = styled.img`
-height: 80%; 
-border-radius: 100%;
+height: 60%; 
+border-radius: 10%;
 
 `
 
 // The styled component for a section of the above Slide component, contains the description 
 const InfoContainer = styled.div`
-flex: 3;
-padding: 50px; 
+color: #3E4516;
+flex: 1;
+padding: 100px; 
 `
 const Title = styled.h1`
-font-size: 70px;
+font-size: 40px;
 
 `
 // Only margin on top and bottom, not left or right 
 const Desc = styled.p`
+color: black;
 margin: 50px 0px; 
-font-size: 20px;
-font-weight: 500; 
-letter-spacing: 2px; 
+font-size: 14px;
+letter-spacing: 1.5px; 
+font-weight: 400; 
 `
 
 //In order for us to position each arrow icon individually, we can use props!
@@ -75,17 +77,19 @@ export default function HomeAbout() {
                 {/* We are instead going to use MAP to create the slider images */}
 
 
-                <Slide bg="C42021">
+                <Slide bg="FFFDE2">
 
                     <InfoContainer>
-                        <Title> About Home </Title>
-                        <Desc> lorem lorem lorem</Desc>
+                        <Title> From Greenhouse to Your House </Title>
+                        <Desc> Plant Vandal is an experienced-based plant workshop and premium plant store. We combine plant-based activities, products and environments that bring people together in a way that inspires connection and creativity.
+
+                            Visit one of our retail locations and experience the modern plant revival through do-it-yourself terrariums, organized workshops, premium plant shopping, and a modern yet eclectic ceramic collection. Don't forget to grab a drink at the PlantBar while you're in!</Desc>
                     </InfoContainer>
 
                     <ImgContainer>
                         <Image src="https://www.russh.com/wp-content/uploads/2020/09/70s-scaled.jpg" />
                     </ImgContainer>
-\
+                    \
                 </Slide>
 
             </Wrapper>

@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import "../components/cssFiles/navBar.css"
 
 const Container = styled.footer`
 display: flex;
 height: 200px; 
-color: Black;
-background-color: #F3FFB9; 
+color: #FDF2B0;
+background-color: #AD4913; 
 `
 
 const LeftSeciton = styled.div`
@@ -35,9 +36,10 @@ padding: 60px 0px;
 const AboutContainer = styled.div`
 align-items: center;
 justify-content: center;
+letter-spacing: 1.5px; 
 `
 const AboutTitle = styled.h1`
-font-size: 1rem;
+font-size: 1.2rem;
 `
 
 const AboutDesc = styled.p`
@@ -53,7 +55,6 @@ align-items: center;
 const SocialLink = styled.a`
 `
 
-
 export default function Footer() {
     return (
         <Container>
@@ -62,11 +63,7 @@ export default function Footer() {
                 <AboutContainer>
                     <AboutTitle> About Us</AboutTitle>
                     <AboutDesc>Welcome to the worlds of plants!
-                        We started out words words words words words words words words words words words words
-                        words words words words words words words words words words words
-                        words words words words words words words words words words words words
-                        words words words words words words words words words words words words
-                        words words
+                        Want hands-on plant expertise IRL? Stop by one of our stores in NYC, Boston, Chicago, LA, or San Francisco to explore more plants, planters, & care accessories.
                     </AboutDesc>
 
                 </AboutContainer>
@@ -74,17 +71,17 @@ export default function Footer() {
 
             <CenterSection>
                 <TrademarkContainer>
-                    <Trademark>WHERE DOES THIS SHOW UP TM</Trademark>
+                    <Trademark>PLANT VANDAL &copy;</Trademark>
                 </TrademarkContainer>
 
             </CenterSection>
 
             <RightSection>
                 <SocialContainer>
-                    <SocialLink>
+                    <SocialLink href='https://twitter.com/?lang=en' className='iconImg'>
                         <TwitterIcon fontSize='large' />
                     </SocialLink>
-                    <SocialLink>
+                    <SocialLink href='https://www.instagram.com/' className='iconImg'>
                         <InstagramIcon fontSize='large' />
                     </SocialLink>
 

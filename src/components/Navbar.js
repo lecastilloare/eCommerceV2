@@ -13,10 +13,9 @@ import "./cssFiles/navBar.css"
 // Main NavBar container
 const Container = styled.div`
 height: 55px;
-color: #523637; 
+color: #AD4913; 
 font-size: 1.4rem;
-font-weight: 450;
-background-color: #F3FFB9; 
+background-color: #FFFDE2; 
 `
 
 // Wrapper component 
@@ -29,6 +28,7 @@ padding: 10px 20px;
 // Styled components for each section of the nav bar 
 const LeftSection = styled.div`
 flex: 1;
+font-size: 1.2rem;
 font-weight: 600;
 color: #C42021;`
 
@@ -43,6 +43,7 @@ justify-content: center;
 `
 
 const MenuItem = styled.div`
+font-size: 1.2rem;
 margin-left: 50px; 
 cursor: pointer;
 
@@ -58,9 +59,9 @@ export default function Navbar() {
                 <CenterSection>  </CenterSection>
                 <RightSection>
 
-                    <MenuItem><Link to="/store" className='navLink'> STORE </Link></MenuItem>
-                    <MenuItem><Link to="/contact" className='navLink'> CONTACT </Link></MenuItem>
-                    <MenuItem><Link to="/plantcare" className='navLink'> PLANT CARE </Link></MenuItem>
+                    <MenuItem><Link to="/store" className='navLink'> Store </Link></MenuItem>
+                    <MenuItem><Link to="/contact" className='navLink'> Contact </Link></MenuItem>
+                    <MenuItem><Link to="/plantcare" className='navLink'> Plant Care </Link></MenuItem>
                 </RightSection>
 
             </Wrapper>

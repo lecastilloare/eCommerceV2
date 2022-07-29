@@ -6,13 +6,21 @@
 
 }
 
-.product_box {
-    background-color: cyan;
-    width: 500 px;
-
+.info {
+    color: #ff8223;
+    font-size: 25px;
 }
 
-.info {
-    background-color: blueviolet;
-    width: 100%;
+.price {
+    color: #cab606;
+    font-size: 15px;
+}
+
+.script {
+    justify-content: left;
+    color: #FDF2B0;
+    font-size: 12x;
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    padding: 10px 30px;
 }
